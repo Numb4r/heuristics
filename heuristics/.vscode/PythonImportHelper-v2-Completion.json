@@ -1,0 +1,308 @@
+[
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "tsplib95",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tsplib95",
+        "description": "tsplib95",
+        "detail": "tsplib95",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "Neighborhood",
+        "kind": 6,
+        "importPath": "common.neighborhood",
+        "description": "common.neighborhood",
+        "peekOfCode": "class Neighborhood(ABC):\n    \"\"\"Abstract class for neighborhood definition.\n    \"\"\"\n    def __init__(self):\n        pass\n    @abstractmethod\n    def find_best(\n        self, \n        problem: Problem, \n        solution: object, ",
+        "detail": "common.neighborhood",
+        "documentation": {}
+    },
+    {
+        "label": "Problem",
+        "kind": 6,
+        "importPath": "common.problem",
+        "description": "common.problem",
+        "peekOfCode": "class Problem(ABC):\n    \"\"\"Abstract class for problem definition.\n    \"\"\"\n    def __init__(self):\n        pass\n    @abstractmethod\n    def evaluate(\n        self, \n        solution: object\n    ) -> int | float:",
+        "detail": "common.problem",
+        "documentation": {}
+    },
+    {
+        "label": "best_improvement_local_search",
+        "kind": 2,
+        "importPath": "local_search.best_improvement",
+        "description": "local_search.best_improvement",
+        "peekOfCode": "def best_improvement_local_search(\n    problem: Problem, \n    neighborhood: Neighborhood, \n    solution: object, \n    obj: int | float | None=None, \n    eps: float=1e-6\n) -> tuple[object, int | float]:\n    \"\"\"Best improvement local search algorithm.\n    :param problem: The problem for which the neighborhood is defined.\n    :param neighborhood: The neighborhood.",
+        "detail": "local_search.best_improvement",
+        "documentation": {}
+    },
+    {
+        "label": "first_improvement_local_search",
+        "kind": 2,
+        "importPath": "local_search.first_improvement",
+        "description": "local_search.first_improvement",
+        "peekOfCode": "def first_improvement_local_search(\n    problem: Problem, \n    neighborhood: Neighborhood, \n    solution: object, \n    obj: int | float | None=None, \n    eps: float=1e-6\n) -> tuple[object, int | float]:\n    \"\"\"First improvement local search algorithm.\n    :param problem: The problem for which the neighborhood is defined.\n    :param neighborhood: The neighborhood.",
+        "detail": "local_search.first_improvement",
+        "documentation": {}
+    },
+    {
+        "label": "random_improvement_local_search",
+        "kind": 2,
+        "importPath": "local_search.random_improvement",
+        "description": "local_search.random_improvement",
+        "peekOfCode": "def random_improvement_local_search(\n    problem: Problem, \n    neighborhood: Neighborhood, \n    solution: object, \n    obj: int | float | None=None, \n    attempts_limit: int=100,\n    rng: random.Random=random,\n    eps: float=1e-6\n) -> tuple[object, int | float]:\n    \"\"\"Best improvement local search algorithm.",
+        "detail": "local_search.random_improvement",
+        "documentation": {}
+    },
+    {
+        "label": "rvnd",
+        "kind": 2,
+        "importPath": "local_search.rvnd",
+        "description": "local_search.rvnd",
+        "peekOfCode": "def rvnd(\n    problem: Problem,\n    neighborhoods: list[Neighborhood],\n    solution: object,\n    obj: int | float | None=None,\n    best_improvement: bool=False,\n    rng: random.Random=random,\n    eps: float=1e-6\n) -> tuple[object, int | float]:\n    \"\"\"Random Variable Neighborhood Descent algorithm.",
+        "detail": "local_search.rvnd",
+        "documentation": {}
+    },
+    {
+        "label": "vnd",
+        "kind": 2,
+        "importPath": "local_search.vnd",
+        "description": "local_search.vnd",
+        "peekOfCode": "def vnd(\n    problem: Problem,\n    neighborhoods: list[Neighborhood],\n    solution: object,\n    obj: int | float | None=None,\n    best_improvement: bool=False,\n    eps: float=1e-6\n) -> tuple[object, int | float]:\n    \"\"\"Variable Neighborhood Descent algorithm.\n    :param problem: The problem for which the neighborhoods are defined.",
+        "detail": "local_search.vnd",
+        "documentation": {}
+    },
+    {
+        "label": "ils",
+        "kind": 2,
+        "importPath": "metaheuristics.ils",
+        "description": "metaheuristics.ils",
+        "peekOfCode": "def ils(\n    problem: Problem,\n    local_search: Callable[[Problem,object,int|float,random.Random], tuple[object,int|float]],\n    perturbation: Callable[[Problem,object,int|float,random.Random], tuple[object,int|float]],\n    start_solution: object,\n    start_obj: int|float|None=None,\n    max_iter: float=math.inf,\n    max_iter_no_improv: float=math.inf,\n    max_time: float=math.inf,\n    rng: random.Random=random,",
+        "detail": "metaheuristics.ils",
+        "documentation": {}
+    },
+    {
+        "label": "multistart",
+        "kind": 2,
+        "importPath": "metaheuristics.multi_start",
+        "description": "metaheuristics.multi_start",
+        "peekOfCode": "def multistart(\n    problem: Problem,\n    local_search: Callable[[Problem,object,int|float,random.Random], tuple[object,int|float]],\n    rng: random.Random=random,\n    cb: Callable[[int,object,int|float],None]=lambda iter, solution, obj: None\n) -> tuple[object,int|float]:\n    best_solution = None \n    best_obj = math.inf \n    iter = 0\n    while True:",
+        "detail": "metaheuristics.multi_start",
+        "documentation": {}
+    },
+    {
+        "label": "simulated_annealing",
+        "kind": 2,
+        "importPath": "metaheuristics.simulated_annealing",
+        "description": "metaheuristics.simulated_annealing",
+        "peekOfCode": "def simulated_annealing(\n    problem: Problem,\n    start_temperature:float=1,\n    cooling_rate:float = 0.0005,\n    rng: random.Random=random,\n    cb: Callable[[int,object,int|float],None]=lambda iter, solution, obj: None,\n    threshold:float = 1e-6,\n) -> tuple[object,int|float]:\n    solution = problem.nodes()\n    obj = problem.evaluate(solution)",
+        "detail": "metaheuristics.simulated_annealing",
+        "documentation": {}
+    },
+    {
+        "label": "acceptance_probability",
+        "kind": 2,
+        "importPath": "metaheuristics.simulated_annealing",
+        "description": "metaheuristics.simulated_annealing",
+        "peekOfCode": "def acceptance_probability(obj, best_obj, temperature):\n    if obj < best_obj:\n        return 1.0\n    else:\n        delta = (obj - best_obj) / (abs(best_obj) + 1e-6)\n        return math.exp(-delta / temperature)\ndef cool_temperature(temperature, cooling_rate):\n    return temperature * (1 - cooling_rate)",
+        "detail": "metaheuristics.simulated_annealing",
+        "documentation": {}
+    },
+    {
+        "label": "cool_temperature",
+        "kind": 2,
+        "importPath": "metaheuristics.simulated_annealing",
+        "description": "metaheuristics.simulated_annealing",
+        "peekOfCode": "def cool_temperature(temperature, cooling_rate):\n    return temperature * (1 - cooling_rate)",
+        "detail": "metaheuristics.simulated_annealing",
+        "documentation": {}
+    },
+    {
+        "label": "farthest_insertion_heuristic",
+        "kind": 2,
+        "importPath": "problems.tsp.heuristics.farthest_insertion",
+        "description": "problems.tsp.heuristics.farthest_insertion",
+        "peekOfCode": "def farthest_insertion_heuristic(problem: TSP, start_node: int) -> tuple[list[int], float]:\n    \"\"\"Generates a solution for the TSP problem using the farthest insertion heuristic.\n    The farthest insertion heuristic starts at one node and then, repeatedly finds the \n    node not already in the tour that is farthest from any node in the tour. It then \n    inserts the node into the position that minimizes the increase in the total cost. \n    It stops when all nodes have been visited.\n    The time complexity of the farthest insertion algorithm is O(n^2).\n    :param problem: The TSP problem.\n    :param start_node: The node to start the solution from.\n    :return: A solution obtained with the farthest insertion heuristic and its cost.",
+        "detail": "problems.tsp.heuristics.farthest_insertion",
+        "documentation": {}
+    },
+    {
+        "label": "nearest_insertion_heuristic",
+        "kind": 2,
+        "importPath": "problems.tsp.heuristics.nearest_insertion",
+        "description": "problems.tsp.heuristics.nearest_insertion",
+        "peekOfCode": "def nearest_insertion_heuristic(problem: TSP, start_node: int) -> tuple[list[int], float]:\n    \"\"\"Generates a solution for the TSP problem using the nearest insertion heuristic.\n    The nearest insertion heuristic starts at one node and then, repeatedly finds the \n    node not already in the tour that is closest to any node in the tour. It then \n    inserts the node into the position that minimizes the increase in the total cost. \n    It stops when all nodes have been visited.\n    The time complexity of the nearest insertion algorithm is O(n^2).\n    :param problem: The TSP problem.\n    :param start_node: The node to start the solution from.\n    :return: A solution obtained with the nearest insertion heuristic and its cost.",
+        "detail": "problems.tsp.heuristics.nearest_insertion",
+        "documentation": {}
+    },
+    {
+        "label": "nearest_neighbor_heuristic",
+        "kind": 2,
+        "importPath": "problems.tsp.heuristics.nearest_neighbor",
+        "description": "problems.tsp.heuristics.nearest_neighbor",
+        "peekOfCode": "def nearest_neighbor_heuristic(\n    problem: TSP,\n    start_node: int\n) -> tuple[list[int], float]:\n    \"\"\"Generates a solution for the TSP problem using the nearest neighbor heuristic.\n    The nearest neighbor heuristic starts at one node and connects with the closests \n    unvisited node. It repeats until all nodes have been visited. It then returns to \n    the starting node.\n    The time complexity of the nearest neighbor algorithm is O(n^2).\n    :param TSP: The TSP problem.",
+        "detail": "problems.tsp.heuristics.nearest_neighbor",
+        "documentation": {}
+    },
+    {
+        "label": "random_heuristic",
+        "kind": 2,
+        "importPath": "problems.tsp.heuristics.random_heuristic",
+        "description": "problems.tsp.heuristics.random_heuristic",
+        "peekOfCode": "def random_heuristic(problem: TSP, rng: random.Random=random) -> tuple[list[int], float]:\n    \"\"\"Randomly generates a solution for the TSP problem.\n    :param problem: The TSP problem.\n    :param rng: The random number generator (optional, default is to use the random module).\n    :return: A random solution and its cost.\n    \"\"\"\n    nodes = problem.nodes()\n    rng.shuffle(nodes)\n    return nodes, problem.evaluate(nodes)",
+        "detail": "problems.tsp.heuristics.random_heuristic",
+        "documentation": {}
+    },
+    {
+        "label": "TwoOpt",
+        "kind": 6,
+        "importPath": "problems.tsp.neighborhoods.ns_2opt",
+        "description": "problems.tsp.neighborhoods.ns_2opt",
+        "peekOfCode": "class TwoOpt(Neighborhood):\n    \"\"\"\n    \"\"\"\n    def two_opt_switch_separeted(self,neighbor,i,j):\n        return neighbor[:i],neighbor[i:j][::-1],neighbor[j:]\n    def __init__(self):\n        super()\n    def find_best(self, problem:TSP, solution:list[int], obj:float|None=None) -> tuple[list,float]:\n        neighbor = solution.copy()\n        neighbor_obj = obj if obj is not None else problem.evaluate(neighbor)",
+        "detail": "problems.tsp.neighborhoods.ns_2opt",
+        "documentation": {}
+    },
+    {
+        "label": "ThreeOpt",
+        "kind": 6,
+        "importPath": "problems.tsp.neighborhoods.ns_3opt",
+        "description": "problems.tsp.neighborhoods.ns_3opt",
+        "peekOfCode": "class ThreeOpt(Neighborhood):\n    \"\"\"\n    \"\"\"\n    def __init__(self):\n        super()\n    def three_opt_switch_separeted(self,neighbor,i,j,k):\n        return neighbor[:i],neighbor[i:j][::-1],neighbor[j:k][::-1] ,neighbor[k:]\n    def find_best(self, problem:TSP, solution:list[int], obj:float|None=None) -> tuple[list,float]:\n        neighbor = solution.copy()\n        neighbor_obj = obj if obj is not None else problem.evaluate(neighbor)",
+        "detail": "problems.tsp.neighborhoods.ns_3opt",
+        "documentation": {}
+    },
+    {
+        "label": "Shift",
+        "kind": 6,
+        "importPath": "problems.tsp.neighborhoods.ns_shift",
+        "description": "problems.tsp.neighborhoods.ns_shift",
+        "peekOfCode": "class Shift(Neighborhood):\n    \"\"\"Switch neighborhood for the TSP.\n    \"\"\"\n    def __init__(self):\n        super()\n    def find_best(self, problem:TSP, solution:list[int], obj:float|None=None) -> tuple[list,float]:\n        solution_best = solution \n        obj_best = obj\n        for i,_ in enumerate(solution):\n            node = solution[i]",
+        "detail": "problems.tsp.neighborhoods.ns_shift",
+        "documentation": {}
+    },
+    {
+        "label": "Switch",
+        "kind": 6,
+        "importPath": "problems.tsp.neighborhoods.ns_switch",
+        "description": "problems.tsp.neighborhoods.ns_switch",
+        "peekOfCode": "class Switch(Neighborhood):\n    \"\"\"Switch neighborhood for the TSP.\n    \"\"\"\n    def __init__(self):\n        super()\n    def find_best(self, problem:TSP, solution:list[int], obj:float|None=None) -> tuple[list,float]:\n        neighbor = solution.copy()\n        neighbor_obj = obj if obj is not None else problem.evaluate(neighbor)\n        best_i, best_j = None, None\n        best_delta = 0",
+        "detail": "problems.tsp.neighborhoods.ns_switch",
+        "documentation": {}
+    },
+    {
+        "label": "TSP",
+        "kind": 6,
+        "importPath": "problems.tsp.problem",
+        "description": "problems.tsp.problem",
+        "peekOfCode": "class TSP:\n    \"\"\"Class that represents a TSP problem.\n    \"\"\"\n    def __init__(self, filename: str):\n        \"\"\"Initializes the TSP problem from a file.\n        This constructor loads a TSP problem data from a file in the TSPLIB format.\n        :param filename: Path to the file containing the TSP problem data.\n        \"\"\"\n        self.__data = tsplib95.load(filename)\n    def size(self) -> int:",
+        "detail": "problems.tsp.problem",
+        "documentation": {}
+    }
+]
